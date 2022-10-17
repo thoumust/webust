@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="header">
+	<div class="container">
+		<nav>
+			<img src="images/logo.png" class="logo">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Personal Info</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="header-text">
+			<p>Bachelor of Science in Information <br>Technology student</p>
+			<h1>Hello! I am <span>Leslie Faye</span><br> G Fuentes</h1>
+		</div>
+	</div>
+</div>
+<!--about-->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="about-col-1">
+				<img src="images/user.png">
+			</div>
+			<div class="about-col-2">
+				<h1 class="subtitle">About <span>Me</span></h1>
+				<p>I am Leslie Faye G. Fuentes, and I am currently pursuing Bachelor of Science in Information Technology. The University of the Cordilleras is where I am currently pursuing my education. I am currently in my second year of college and am making every effort to complete my education and earn a diploma. I anticipate that I will receive my diploma during the school year of 2024-2025.</p>
+
+				<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('SkillsandQualifications')">Skills and Qualifications</p>
+					<p class="tab-links" onclick="opentab('SeminarsandTrainings')">Seminars and Trainings</p>
+					<p class="tab-links" onclick="opentab('EducationalAttainment')">Educational Attainment</p>
+				</div>
+				<div class="tab-contents active-tab" id="SkillsandQualifications">
+					<ul>
+						<li><span>Microsoft Powerpoint</span><br>Knowledgeable in Microsoft Powerpoint.</li>
+						<li><span>Speaking</span><br>Profecient in public speaking as evidence in various community lead.</li>
+						<li><span>Leader and Flexible</span><br>Proven leadership ability and a flexible individual who functions well in a fast-paced work environment.</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="SeminarsandTrainings">
+					<ul>
+						<li><span>Refocus Digital Academy</span><br>Data Analytics with SQL for beginners Webinar</li>
+						<li><span>Refocus Digital Academy</span><br>How to Become a Data Scientist without experience Webinar</li>
+						<li><span>Technical Achievement</span><br>Certificate of Technical Achievement - Javascript-Beginner Level</li>
+						<li><span>Cisco Networking Academy</span><br>The Linux Essentials Professional Development Certificate</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="EducationalAttainment">
+					<ul>
+						<li><span>Undergraduate</span><br>Bachelor of Science in Information Technology- Major in Web Technology at the University of the Cordilleras</li>
+						<li><span>Senior High School</span><br>Science, Technology, Engineering and Mathematics at Quirino State University-Laboratory High School</li>
+						<li><span>Junior High School</span><br>Saint John Berchman's High School at Cordon, Isabela</li>
+						<li><span>Primary</span><br>San Antonio Integrated School at Diffun, Quirino</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--personal info-->
+<div id="personal info">
+	<div class="container">
+		<h1 class="subtitle"><span>Personal</span> Info</h1>
+		<div class="personal-info">
+			<div>
+				<p></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabconent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+</script>
+
+</body>
+</html>
